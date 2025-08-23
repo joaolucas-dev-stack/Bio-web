@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bio - João Lucas</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bitcount+Prop+Single:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="baixados.webp" type="image/png">
+</head>
+
+<body>
+  <!-- Tela de Abertura -->
+  <div id="tela-abertura" class="tela-abertura">
+    <div class="conteudo-abertura">
+      <div class="logo-container">
+        <img src="baixados.webp" alt="Logo" class="logo">
+        <h1 class="titulo-abertura">Bem-vindo!</h1>
+        <p class="subtitulo-abertura">Desenvolvedor Full Stack</p>
+      </div>
+      
+      <div class="desafio-container">
+        <h2>🧮 Desafio Matemático</h2>
+        <p>Resolva este cálculo para acessar minha bio:</p>
+        <div class="calculo">
+          <span id="num1">0</span>
+          <span class="operador">+</span>
+          <span id="num2">0</span>
+          <span class="operador">=</span>
+          <input type="number" id="resposta" placeholder="?" class="input-resposta">
+        </div>
+        <button id="verificar" class="btn-verificar">Verificar</button>
+        <p id="mensagem" class="mensagem"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Conteúdo Principal (inicialmente oculto) -->
+  <div id="conteudo-principal" class="conteudo-principal" style="display: none;">
+    <header id="topo">
+      <h1>Minha Bio
+      <span> - João Lucas</span>
+      </h1>
+    <nav>
+      <ul>
+        <li><a href="https://wa.me/5511996566859?text=Ol%C3%A1%2C%20Jo%C3%A3o%20Lucas%21%20Gostaria%20de%20saber%20mais%20sobre%20seus%20projetos." target="_blank" rel="noopener noreferrer">Contato</a></li>
+        <li><a href="mailto:joao.lucasr222@gmail.com" target="_blank">Email</a></li>
+        <li><a href="https://www.instagram.com/joaolucas_x?igsh=d3dycTdkYW5hM21s&utm_source=qr" target="_blank">Instagram</a></li>
+        <li><a href="https://mate.academy/pt" target="_blank">Curso Full Stack</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+      </ul>
+    </nav>
+    </header>
+
+    <main>
+    <div class="container">
+      <h2>Minha Jornada</h2>
+      <p>
+        Estou dando meus primeiros passos na área de desenvolvimento Full Stack, mergulhando no mundo da programação com dedicação diária.
+        Cada linha de código é um pequeno avanço rumo a algo maior.
+      </p>
+      <p>
+        Cada exercício e desafio que enfrento se torna uma oportunidade para aprender algo novo e aprimorar minhas habilidades.
+        Embora esteja no início da jornada, sigo com foco e determinação.
+      </p>
+      <p>
+        Meu objetivo é crescer constantemente, explorando diferentes tecnologias e expandindo meus horizontes no mundo da programação.
+        A caminhada está só começando! 🚀
+      </p>
+    </div>
+
+   <section id="sobre" class="section">
+    <div class="container">
+      <h2>Sobre Mim</h2>
+      <p>Olá! Meu nome é João Lucas, tenho 26 anos e estou vivendo uma nova fase, migrando para a área de Tecnologia da Informação. Sempre tive curiosidade por tecnologia, mas por muito tempo achei que seria um caminho complicado demais.</p>
+      <p>Hoje, estudando na Mate Academy, percebo que o aprendizado pode ser leve e motivador. Mais para frente, pretendo me aprofundar ainda mais, buscando estudar Engenharia de Software.</p>
+      <p>Estou empolgado para seguir evoluindo, enfrentar novos desafios e ir muito além do que imaginei.</p>
+    </div>
+  </section>
+    </main>
+    <div><a href="#topo">voltar ao topo</a></div>
+    <footer class="footer">
+      © Desenvolvido por João Lucas 2025
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

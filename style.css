@@ -1,0 +1,370 @@
+/* Configuração de rolagem suave para navegação por âncoras */
+html {
+  scroll-behavior: smooth; /* Rolagem suave para âncoras */
+}
+
+/* ===== TELA DE ABERTURA ===== */
+/* Container principal da tela de abertura que cobre toda a tela */
+.tela-abertura {
+  position: fixed; /* Posição fixa para cobrir toda a tela */
+  top: 0; /* Posiciona no topo da tela */
+  left: 0; /* Posiciona na esquerda da tela */
+  width: 100%; /* Ocupa toda a largura da tela */
+  height: 100%; /* Ocupa toda a altura da tela */
+  background: linear-gradient(135deg, rgb(50, 50, 50) 0%, rgb(81, 135, 153) 100%); /* Gradiente de fundo usando cores da bio */
+  display: flex; /* Layout flexbox para centralizar conteúdo */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  z-index: 1000; /* Garante que fique acima de outros elementos */
+  animation: fadeIn 1s ease-in; /* Animação de entrada com fade */
+
+}
+
+/* Container do conteúdo central da tela de abertura */
+.conteudo-abertura {
+  text-align: center; /* Centraliza todo o texto */
+  color: white; /* Cor do texto branco */
+  max-width: 600px; /* Largura máxima do container */
+  padding: 2rem; /* Espaçamento interno */
+  background: rgba(255, 255, 255, 0.1); /* Fundo semi-transparente */
+  border-radius: 20px; /* Bordas arredondadas */
+  backdrop-filter: blur(10px); /* Efeito de blur no fundo */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Borda sutil */
+  animation: slideUp 1s ease-out 0.5s both; /* Animação de entrada deslizante */
+}
+
+/* Container do logo e título principal */
+.logo-container {
+  margin-bottom: 1.5rem; /* Espaço abaixo do container */
+  animation: bounce 2s ease-in-out infinite; /* Animação de quique contínua */
+  padding-bottom: -100%;
+}
+
+/* Estilização da imagem do logo */
+.logo {
+  width: 80px; /* Largura do logo */
+  height: 90px; /* Altura do logo */
+  border-radius: 25%; /* Formato circular */
+  margin-bottom: 1rem; /* Espaço abaixo do logo */
+  border: 2px solid rgba(255, 255, 255, 0.3); /* Borda sutil */
+  animation: pulse 2s ease-in-out infinite; /* Animação de pulso contínua */
+  margin-top: 2.5rem;
+}
+
+/* Título principal da tela de abertura */
+.titulo-abertura {
+  font-size: 2rem; /* Tamanho grande da fonte */
+  margin: 0; /* Remove margens */
+  font-family: "Bebas Neue", sans-serif; /* Fonte personalizada */
+  background: linear-gradient(45deg, #fff, #38434400); /* Gradiente no texto */
+  -webkit-background-clip: text; /* Clipa o fundo ao texto (WebKit) */
+  -webkit-text-fill-color: transparent; /* Torna o texto transparente */
+  background-clip: text; /* Clipa o fundo ao texto */
+  animation: glow 0.9s ease-in-out infinite alternate; /* Animação de brilho alternada */
+}
+
+/* Subtítulo da tela de abertura */
+.subtitulo-abertura {
+  font-size: 1.2rem; /* Tamanho da fonte */
+  margin: 0.5rem 0; /* Margens verticais */
+  opacity: 0.9; /* Transparência sutil */
+  font-family: "Roboto", sans-serif; /* Fonte secundária */
+}
+
+/* Container do desafio matemático */
+.desafio-container {
+  background: rgba(15, 15, 15, 0.1); /* Fundo semi-transparente */
+  padding: 2rem; /* Espaçamento interno */
+  border-radius: 15px; /* Bordas arredondadas */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Borda sutil */
+  animation: fadeInUp 1s ease-out 1s both; /* Animação de entrada com delay */
+}
+
+/* Título do desafio matemático */
+.desafio-container h2 {
+  margin: 0 0 1rem 0; /* Margens: topo, direita, baixo, esquerda */
+  font-size: 1.8rem; /* Tamanho da fonte */
+  font-family: "Bebas Neue", sans-serif; /* Fonte personalizada */
+}
+
+/* Parágrafos do desafio */
+.desafio-container p {
+  margin: 0.5rem 0; /* Margens verticais */
+  font-size: 1.1rem; /* Tamanho da fonte */
+}
+
+/* Layout do cálculo matemático */
+.calculo {
+  display: flex; /* Layout flexbox */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  gap: 1rem; /* Espaço entre elementos */
+  margin: 2rem 0; /* Margens verticais */
+  font-size: 2rem; /* Tamanho grande da fonte */
+  font-weight: bold; /* Texto em negrito */
+}
+
+/* Estilização dos operadores matemáticos */
+.operador {
+  color: rgb(9, 10, 10); /* Cor azul da bio */
+  text-shadow: 0 0 10px rgba(228, 231, 232, 0.8); /* Sombra de texto */
+}
+
+/* Campo de entrada para a resposta */
+.input-resposta {
+  width: 80px; /* Largura do campo */
+  height: 50px; /* Altura do campo */
+  font-size: 1.5rem; /* Tamanho da fonte */
+  text-align: center; /* Centraliza o texto */
+  border: none; /* Remove borda padrão */
+  border-radius: 10px; /* Bordas arredondadas */
+  background: rgba(255, 255, 255, 0.9); /* Fundo semi-transparente */
+  color: #333; /* Cor do texto */
+  outline: none; /* Remove contorno ao focar */
+  transition: all 0.3s ease; /* Transição suave para todas as propriedades */
+}
+
+/* Estado focado do campo de resposta */
+.input-resposta:focus {
+  transform: scale(1.1); /* Aumenta ligeiramente o tamanho */
+  box-shadow: 0 0 20px rgba(81, 135, 153, 0.8); /* Sombra azul ao focar */
+}
+
+/* Botão de verificação da resposta */
+.btn-verificar {
+  background: linear-gradient(45deg, rgb(81, 135, 153), rgb(50, 50, 50)); /* Gradiente com cores da bio */
+  color: white; /* Cor do texto */
+  border: none; /* Remove borda */
+  padding: 12px 30px; /* Espaçamento interno */
+  font-size: 1.1rem; /* Tamanho da fonte */
+  border-radius: 25px; /* Bordas muito arredondadas */
+  cursor: pointer; /* Cursor de mão ao passar */
+  transition: all 0.3s ease; /* Transição suave */
+  font-family: "Bebas Neue", sans-serif; /* Fonte personalizada */
+  margin: 1rem 0; /* Margens verticais */
+}
+
+/* Estado hover do botão de verificação */
+.btn-verificar:hover {
+  transform: translateY(-2px); /* Move o botão para cima */
+  box-shadow: 0 10px 20px rgba(2, 86, 241, 0.611); /* Sombra azul da bio */
+  background: linear-gradient(45deg, rgb(50, 50, 50), rgb(81, 135, 153)); /* Gradiente invertido */
+}
+
+/* Container das mensagens de feedback */
+.mensagem {
+  margin: 1rem 0; /* Margens verticais */
+  font-weight: bold; /* Texto em negrito */
+  min-height: 20px; /* Altura mínima para evitar saltos */
+}
+
+/* Estilo da mensagem de sucesso */
+.mensagem.sucesso {
+  color: rgb(27, 44, 50); /* Cor azul da bio */
+  animation: successPulse 0.5s ease-in-out; /* Animação de pulso de sucesso */
+}
+
+/* Estilo da mensagem de erro */
+.mensagem.erro {
+  color: #ff6b6b; /* Cor vermelha suave */
+  animation: errorShake 0.5s ease-in-out; /* Animação de tremor de erro */
+}
+
+/* ===== CONTEÚDO PRINCIPAL ===== */
+/* Container do conteúdo principal da bio */
+.conteudo-principal {
+  animation: fadeIn 1s ease-in; /* Animação de entrada */
+}
+
+/* ===== ANIMAÇÕES ===== */
+/* Animação de fade in (aparecimento gradual) */
+@keyframes fadeIn {
+  from { opacity: 0; } /* Começa invisível */
+  to { opacity: 1; } /* Termina totalmente visível */
+}
+
+/* Animação de deslizamento para cima */
+@keyframes slideUp {
+  from {
+    opacity: 0; /* Começa invisível */
+    transform: translateY(20px); /* Começa 50px abaixo */
+  }
+  to {
+    opacity: 1; /* Termina visível */
+    transform: translateY(0); /* Termina na posição normal */
+  }
+}
+
+/* Animação de fade in com deslizamento para cima */
+@keyframes fadeInUp {
+  from {
+    opacity: 0; /* Começa invisível */
+    transform: translateY(30px); /* Começa 30px abaixo */
+  }
+  to {
+    opacity: 1; /* Termina visível */
+    transform: translateY(0); /* Termina na posição normal */
+  }
+}
+
+/* Animação de quique (bounce) */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0); /* Posição normal */
+  }
+  40% {
+    transform: translateY(-10px); /* Move para cima */
+  }
+  60% {
+    transform: translateY(-5px); /* Move para cima (menos) */
+  }
+  100% {
+    transform: translateY(0); /* Posição normal */
+  }
+}
+
+/* Animação de pulso */
+@keyframes pulse {
+  0% {
+    transform: scale(1); /* Tamanho normal */
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7); /* Sombra normal */
+  }
+  70% {
+    transform: scale(1.05); /* Aumenta ligeiramente */
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0); /* Sombra expandida */
+  }
+  100% {
+    transform: scale(1); /* Volta ao tamanho normal */
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); /* Sombra desaparece */
+  }
+}
+
+/* Animação de brilho (glow) */
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #444, 0 0 10px #fff, 0 0 15px #444; /* Brilho sutil */
+  }
+  to {
+    text-shadow: 0 0 10px #fff, 0 0 20px #555, 0 0 30px #fff; /* Brilho intenso */
+  }
+}
+
+/* Animação de pulso de sucesso */
+@keyframes successPulse {
+  0% { transform: scale(1); } /* Tamanho normal */
+  50% { transform: scale(1.1); } /* Aumenta */
+  100% { transform: scale(1); } /* Volta ao normal */
+}
+
+/* Animação de tremor de erro */
+@keyframes errorShake {
+  0%, 100% { transform: translateX(0); } /* Posição normal */
+  25% { transform: translateX(-5px); } /* Move para esquerda */
+  75% { transform: translateX(5px); } /* Move para direita */
+}
+
+/* ===== ESTILOS EXISTENTES DA BIO ===== */
+/* Lista de navegação principal */
+nav ul {
+  list-style: none; /* Remove marcadores da lista */
+  padding: 0; /* Remove padding padrão */
+  margin: 0; /* Remove margem padrão */
+  background:rgba(81, 135, 153, 0.8); /* Fundo do menu com transparência */
+  display: flex;  /* Layout flexbox para itens em linha */
+  justify-content: center; /* Centraliza os itens horizontalmente */
+  gap: 40px; /* Espaço entre os itens do menu */
+}
+
+/* Links individuais do menu de navegação */
+nav ul li a {
+  color: #fff; /* Cor do texto branco */
+  text-decoration: none; /* Remove sublinhado */
+  font-family: "Bebas Neue", sans-serif; /* Fonte personalizada */
+  font-size: 22px; /* Tamanho da fonte */
+  padding: 16px 10px; /* Espaçamento interno */
+  display: inline-block; /* Permite padding e hover */
+  transition: background 0.2s, color 0.2s; /* Transição suave */
+}
+
+/* Estado hover dos links do menu */
+nav ul li a:hover {
+  background:rgba(81, 135, 153, 0.8); /* Fundo ao passar mouse */
+  color: #fff; /* Cor do texto ao passar mouse */
+  border-radius: 6px; /* Bordas arredondadas */
+  transition: linear; /* Tipo de transição */
+  border-radius: 25px; /* Mais arredondado ao hover */
+}
+
+/* Corpo principal da página */
+body {
+  background-color: rgb(50, 50, 50); /* Cor de fundo cinza escuro */
+  overflow-x: hidden; /* Remove rolagem horizontal */
+}
+
+/* Títulos principais da página */
+h1 {
+  color: white; /* Cor do título branco */
+  text-align: center; /* Centraliza o texto */
+  margin: 20px 0; /* Espaço acima e abaixo */
+  font-family: "Bebas Neue", sans-serif; /* Fonte personalizada */
+}
+
+/* Subtítulos da página */
+h2 {
+  color: white; /* Cor do subtítulo branco */
+  text-align: center; /* Centraliza o texto */
+  margin: 20px 0; /* Espaço acima e abaixo */
+  font-family: "Roboto", sans-serif; /* Fonte secundária */
+  font-size: 28px; /* Tamanho da fonte */
+}
+
+/* Seções de conteúdo da bio */
+.section {
+  padding: 4px 50px; /* Espaço interno */
+  margin: 20px auto 45px auto; /* Espaço externo e centraliza */
+  max-width: 800px; /* Largura máxima */
+  background-color: rgb(81, 135, 153); /* Fundo azul acinzentado */
+  border-radius: 20px; /* Bordas arredondadas */
+  line-height: 1.8; /* Espaço entre linhas */
+}
+
+/* Parágrafos de texto */
+p {
+  border-radius: 18px; /* Bordas arredondadas */
+  color: #fff; /* Cor do texto branco */
+  padding: 22px 28px; /* Espaço interno */
+  font-size: 1.2rem; /* Tamanho da fonte */
+  box-shadow: 0 4px 15px rgba(2, 86, 241, 0.611); /* Sombra azul */
+  transition: transform 0.2s, box-shadow 0.2s, background 0.3s; /* Transições suaves */
+  line-height: 1.7; /* Espaço entre linhas */
+  text-align: center; /* Centraliza o texto */
+}
+
+/* Rodapé da página */
+.footer {
+  background-color: #444; /* Fundo cinza escuro */
+  color: white; /* Cor do texto branco */
+  text-align: center; /* Centraliza o texto */
+  padding:  0 25px; /* Espaço lateral */
+  margin-bottom: 0; /* Remove margem inferior */
+  width: 100%; /* Ocupa toda a largura */
+}
+
+/* Container principal do conteúdo */
+.container {
+  max-width: 800px; /* Largura máxima do conteúdo */
+  margin: 0 auto; /* Centraliza horizontalmente */
+  text-align: center; /* Centraliza o conteúdo */
+  padding: 2rem; /* Espaço interno */
+  line-height: 1.6; /* Espaço entre linhas */
+}
+
+/* Links gerais da página */
+body div a {
+ color: #fff; /* Cor do link branco */
+ text-decoration: none; /* Remove sublinhado */
+ padding: 2px 1px; /* Espaço interno */
+ font-family: "Bebas Neue", sans-serif; /* Fonte personalizada */
+ transition: background 0; /* Transição suave para background */
+}
+
